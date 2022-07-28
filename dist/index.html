@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Specify - Your Choice Is Your Voice</title>
+  <script defer src="./index.js"></script>
+  <link rel="stylesheet" href="my-demo.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Specify</h1>
+    <h3>Your Choice Is Your Voice</h3>
+    <h4>We give you leverage in the free-market economy by empowering you to specify the attributes of the products you want to buy</h4>
+  </header>
+
+  <section id="login" class="panel">
+    <h3>Getting Started With Specify</h3>
+    <p> Specify ensures you retain complete control over your data by utilizing Inrupt's SOLID DataPOD platform. Visit Inrupt.com to learn more about this awesome technology and<a href="https://inrupt.com/solid/" target=_blank>create your DataPOD for free!</a></p>
+    <p>If you want to discover how your data is being used to protect your local environment, and how you can get paid for your contributions to the Specify ecosystem, read about<a href="https://specify.taporowhita.com/objectives" target=_blank>the objectives of the Specify community!</a></p>
+
+
+    <div id="read" class="panel">
+      <h3>Connect to the Solid DataPOD Platform</h3>
+      <div class="row">
+      <label id="labelIdP" for="select-idp">Select your Identity Provider: </label>
+      <select id="select-idp" name="select-idp">
+        <option value="">--Please select an Identity Provider (IdP)--</option>
+        <!-- Update the select-idp option if not using PodSpaces -->
+
+        <option value="https://login.inrupt.com">https://login.inrupt.com (PodSpaces)</option>
+      </select>
+      <button name="btnLogin" id="btnLogin">Login</button>
+      </div>
+
+      <div class="row">
+        <p>You have logged in as [insert WebID]</p>
+        
+        <label id="readlabel" for="myWebID">Access your WebID: </label>
+        <input type="text" id="myWebID" name="myWebID" size="50" disabled>
+
+        <button name="btnRead" id="btnRead">Get Pod URL(s)</button>
+      </div>
+
+      <div class= "row">
+        <p>Which dataPOD would you like to use to save your Specify recycling data?
+        </p>
+          <label id="podlabel" for="select-pod">Write to your Pod: </label>
+
+          <select id="select-pod" name="select-pod" widths: 120>
+            <option value="">--Please select your Pod--</option>
+          </select>specify/recycle/my-recycling-info
+      </div>
+    </div>
+  </section>
+
+  <div id="write" class="panel">
+    <h3>Getting Specific</h3>
+    <div class="row">
+      <label id="writelabel">What materials can you recycle locally?</label>
+    </div>
+    <div class="row">
+      <p>You may input your postal zip code to discover what items are recyclable in your area, based upon what other users in your area have specified.</p>
+      <label id="readZip" for="myZip">Enter 5 Digit Zip Code</label>
+        <input type="integer" id="myZip" name="myZiip" size="50" disabled>
+        <button name="btnZip" id="btnZip" disabled>Search</button>
+      <p>You may also input materially types manually, separated by commas or new lines. The type of recyclable is being validated against a lexicon of material names. If you receive an error message, please check the spelling and refer to the lexicon of material class types. If you want to learn more about why we enforce type checking, check out our blog post on schemas.</p>
+      <p>CAUTION:Overwrite. Items removed from this list will also be removed from the server list!</p>
+    </div>
+    <div class="row">
+      <div>
+        <label id="listLabel" for="titles"></label>
+        <textarea id="titles" name="titles" rows="5" cols="52">
+Glass
+Newspaper
+Currugated Cardboard
+Polyethylene
+Polypropylene
+Polystyrene
+</textarea>
+        <button name="btnCreate" id="btnCreate">Update</button>
+      </div>
+      <br>
+      <div class="row">
+      <label>Status:</label>
+      <span id="labelCreateStatus"></span>
+    </div>
+      <br>
+    </div>
+
+
+    <div id="results" class="panel">
+      <div class="row">
+        <div>
+          <label id="labelRetrieved" for="savedtitles">Confirm that the data was saved correctly by comparing this list to the list you uploaded.</label>
+          <textarea id="savedtitles" name="savedtitles" rows="5" cols="42" disabled></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</body> 
+
+</html>
