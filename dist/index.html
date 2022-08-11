@@ -25,7 +25,7 @@
       <h3>Connect to the Solid DataPOD Platform</h3>
       <div class="row">
       <label id="labelIdP" for="select-idp">Select your Identity Provider: </label>
-      <select id="select-idp" name="select-idp">
+      <select id="select-idp" name="select-idp"> <!-- this is the drop down menu. The javascript obtains this value by name "select-idp" using DOM api, and passes the selected value to the function loginToSelectedIdp() -->
         <option value="">--Please select an Identity Provider (IdP)--</option>
         <!-- Update the select-idp option if not using PodSpaces -->
 

@@ -41,7 +41,7 @@ function loginToSelectedIdP() {
   return login({
     oidcIssuer: SELECTED_IDP,
     redirectUrl: window.location.href,// I think this is where the user will be returned to after login. I suspect I could specify another page, if I moved the 'handleIncomingRedirect()' to that page.
-    clientName: "Getting started app"
+    clientName: "Specify"
   });
 }
 
