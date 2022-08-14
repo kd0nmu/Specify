@@ -16,7 +16,8 @@
     "@inrupt/solid-client-authn-browser": "^1.12.1",
     "@inrupt/vocab-common-rdf": "^1.0.5",
     "@inrupt/vocab-solid": "^1.0.4",
-    "buffer": "^6.0.3"
+    "buffer": "^6.0.3",
+    "leaflet": "^1.8.0"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",

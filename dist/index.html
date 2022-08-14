@@ -4,8 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>Specify - Your Choice Is Your Voice</title>
+
   <script defer src="./index.js"></script>
-  <link rel="stylesheet" href="my-demo.css" />
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <link rel="stylesheet" href="./simpleIndexPage.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    #map { height:800px; width:800px }
+  </style>
 </head>
 
 <body>
@@ -55,19 +62,31 @@
     </div>
   </section>
 
-  <div id="write" class="panel">
-    <h3>Getting Specific</h3>
+  <!--Now then, the above information is basically like an account setup. It would make sense to move it to a login or settings page of some kind. We can save these values into a database for future use and usage logging. Also, putting these values in a local variable will allow for their use in all other for using in the next functions.-->
+  <div id="Location" class="panel">
+    <h3>Identify Your Regional Recycling Service Providers</h3>
     <div class="row">
-      <label id="writelabel">What materials can you recycle locally?</label>
+      <label id="writelabel">Set your packaging material specifications according to what materials you can recycle at your local recycling center. Identify your local recycling center from the map, and click 'adopt specifications' to load the list of accepted materials into your specifications list.
+      </label>
     </div>
+    <br>
+    <div>
+      <button name="btnGetOsmLocation" id="btnGetOsmLocation" ">Click to show your location with OpenStreetMap</button>
+    </div>
+    <br>
+    <div id="map"></div>
     <div class="row">
-      <p>You may input your postal zip code to discover what items are recyclable in your area, based upon what other users in your area have specified.</p>
-      <label id="readZip" for="myZip">Enter 5 Digit Zip Code</label>
-        <input type="integer" id="myZip" name="myZiip" size="50" disabled>
-        <button name="btnZip" id="btnZip" disabled>Search</button>
-      <p>You may also input materially types manually, separated by commas or new lines. The type of recyclable is being validated against a lexicon of material names. If you receive an error message, please check the spelling and refer to the lexicon of material class types. If you want to learn more about why we enforce type checking, check out our blog post on schemas.</p>
-      <p>CAUTION:Overwrite. Items removed from this list will also be removed from the server list!</p>
+      <!--Ok, so the code below has been inserted to show a button and a map.
+      It may be necessary to rename these components to get them to work in my code-->
+
+      <!-- <p>Input your zip code to find your local recycling centers.</p>
+      <label id="readZip" for="myZip">5 Digit Zip Code</label>
+        <input type="integer" id="myZip" name="myZiip" size="50" enabled>
+        <button name="btnZip" id="btnZip" enabled>Search</button>
+      <p>If your local recycling center is not listed, please set your specifications manually using the settings tab on the left.</p>
+      <p>Based on the information provided, these are the materials that can be recycled in your local area:</p> -->
     </div>
+    <br>
     <div class="row">
       <div>
         <label id="listLabel" for="titles"></label>
